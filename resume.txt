@@ -1,0 +1,49 @@
+    Compilar
+
+g++ -Wall -Wextra -Werror main.cpp -o app.exe -lsfml-graphics -lsfml-window -lsfml-system
+.\app.exe
+
+g++ main.cpp -o main
+./main
+
+->  app.exe
+
+
+    WideScreen Definition
+
+640, 480
+800 x 600
+1024 x 768
+1280 x 1024
+1440 x 900
+1920 x 1080
+
+
+    Iframe
+
+sf::Renderwindow windown(sf::Videomode(1080,960), "title", sf::Style::default);
+
+while(window.isOpen()){
+
+    sf::Event event;
+
+    while(window.pollEvent(event)){
+        if(event == sf::Event::Closed){
+            window.close();
+        }
+    }
+
+        // updated
+
+        // clean the window
+    window.clear();
+
+        // draw everthing ( shape's )
+
+        // continue showing the window
+    window.display();
+
+}
+
+    
+
